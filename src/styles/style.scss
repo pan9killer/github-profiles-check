@@ -1,0 +1,349 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #faf8f8;
+}
+
+li {
+  list-style: none;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  min-height: 72px;
+  background: #0064eb;
+
+  display: flex;
+  align-items: center;
+}
+
+.mainLogo {
+  &::before {
+    content: "";
+  }
+  display: block;
+  background-image: url(../images/github.svg);
+  fill: #fff;
+  height: 40px;
+  width: 41px;
+  background-position: center;
+  background-size: cover;
+}
+
+.searchGiHub {
+  display: flex;
+  align-items: center;
+
+  width: 500px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 4px;
+
+  position: relative;
+}
+
+.js-input-searchGitHub {
+  font-size: 14px;
+  padding: 0.5rem 1rem;
+  margin-left: 3.6rem;
+  font-weight: 400;
+  width: 40rem;
+
+  border: none;
+  user-select: none;
+  outline: none;
+}
+
+.js-btn-search {
+  background-image: url(../images/search.svg);
+  width: 3rem;
+  height: 3rem;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  position: absolute;
+  left: 1%;
+
+  background-color: transparent;
+  border: none;
+  user-select: none;
+  cursor: pointer;
+}
+
+.containerSearch {
+  // width: 35%;
+  width: 50%;
+  margin-left: 5%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.imgSearch {
+  background-image: url(../images/search.svg);
+}
+
+.imgCancel {
+  background-image: url(../images/notFound.svg);
+  
+}
+
+.imgInitialSearch {
+  width: 6.5rem;
+  height: 6.5rem;
+  margin: 1rem auto;
+
+  background-size: 90%;
+  background-repeat: no-repeat;
+  margin-bottom: 40px;
+}
+
+.containerInitial {
+  width: 100%;
+  height: 90vh;
+  // background-color: #333;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.descriptionInitialSearch {
+  font-size: 22px;
+  width: 22rem;
+  text-align: center;
+  color: #808080;
+  font-weight: 400;
+}
+
+.asideInfoWrapper {
+  width: 30%;
+  margin-top: 3%;
+  // background-color: #0064eb;
+}
+
+.imgProfile {
+  width: 28rem;
+  height: 28rem;
+
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-size: 100%;
+  border-radius: 50%;
+
+  margin: 5% auto;
+  // box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.h2NameProfile {
+  font-size: 2.8rem;
+  // margin: 5% 10%;
+  margin-left: 15%;
+  margin-bottom: 5%;
+}
+
+.linkProfile {
+  font-size: 1.8rem;
+  color: #0064eb;
+
+  margin-left: 15%;
+  text-decoration: none;
+}
+
+.followersInfo {
+  display: flex;
+  align-items: center;
+}
+
+.followingInfo {
+  display: flex;
+  align-items: center;
+}
+
+.wrapperFollowersInfo {
+  width: 92%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 5%;
+}
+
+.imgFollowers {
+  background-image: url("../images/followers.svg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 2.4rem;
+  height: 2.4rem;
+  margin: 0.5rem;
+}
+
+.imgFollowing {
+  background-image: url("../images/following.svg");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  margin: 0.5rem;
+
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.spanInfoFollowers {
+  font-size: 1.6rem;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.reposetoryInfoContainer {
+  width: 60%;
+}
+
+.mainContentInfoLoader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loaderImg {
+  background-image: url("../images/Walk.gif");
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  height: 10rem;
+  width: 10rem;
+}
+
+.reposetoryCountTitle {
+  font-size: 3.2rem;
+  margin-top: 5%;
+}
+
+.imgReposetoryEmpty {
+  background-image: url("../images/listReposetoryEmpty.svg");
+}
+
+// .startPositionInfo {
+//   margin-left: -25%;
+//   margin-top: -20%;
+// }
+
+.descriptionEmptyReposetoryList {
+  width: 30rem;
+}
+
+.paginationjs-pages {
+  padding-left: 50%;
+}
+
+.paginationjs-pages ul {
+  display: flex;
+}
+
+.J-paginationjs-page {
+  font-size: 14px;
+  padding: 0.5rem 0.5rem;
+  // line-height: 21px;
+
+  & a {
+    color: #808080;
+  }
+}
+
+.disabled {
+  font-size: 14px;
+  padding: 0.5;
+  color: #808080;
+}
+
+//btns prev next
+.paginationjs-prev {
+  font-size: 14px;
+  padding: 0.5rem;
+}
+
+.paginationjs-next {
+  font-size: 14px;
+  padding: 0.5rem;
+}
+
+.J-paginationjs-next {
+  font-size: 14px;
+  padding: 0.5rem;
+
+  & a {
+    color: #808080;
+  }
+}
+
+.J-paginationjs-previous {
+  transition: 0.5s all ease;
+
+  & a {
+    color: #808080;
+  }
+}
+
+.active {
+  background-color: #0064eb;
+
+  border-radius: 4px;
+  transition: 0.3s all ease;
+
+  & a {
+    color: #fff;
+  }
+}
+
+.repoInfoData {
+  width: 90%;
+  height: 11.2rem;
+  background-color: #fff;
+  border-radius: 4px;
+  margin: 2.4rem 0;
+}
+
+.linkRepo {
+  font-size: 2.4rem;
+  display: block;
+  padding-top: 2.4rem;
+  margin: 0 0 1.6rem 3.2rem;
+  color: #0064eb;
+  font-weight: 500;
+}
+
+.descriptionProjectGitHub {
+  display: block;
+  margin: 0 0 1.6rem 3.2rem;
+  font-size: 1.6rem;
+}
+
+.paginationjs-pages ul {
+  justify-content: flex-end;
+  width: 80%;
+}
