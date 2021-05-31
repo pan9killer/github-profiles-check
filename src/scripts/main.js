@@ -13,31 +13,14 @@ const refs = {
   btnSearch: document.querySelector(".js-btn-search"),
 };
 
-// "https://api.github.com/users/Hibanaga/repos"
-// "https://api.github.com/users/Hibanaga"
-
-// axios(`https://api.github.com/users/Hibanaga/repos?per_page=36`).then(
-//   (data) => {
-//     console.log(data);
-//   }
-// );
-
-// axios(`https://api.github.com/users/Hibanaga`).then((data) => {
-//   console.log(data);
-// });
-
 refs.btnSearch.addEventListener("click", (event) => {
   let nameToSearch = refs.inputSearch.value;
-
-  // console.log(nameToSearch);
-
   axiosInfoReposetory(nameToSearch);
 });
 
 function axiosInfoReposetory(name) {
   axios(`https://api.github.com/users/${name}`)
     .then((data) => {
-      // console.log(data);
       successRequest(data.data, name);
     })
     .catch(() => {
